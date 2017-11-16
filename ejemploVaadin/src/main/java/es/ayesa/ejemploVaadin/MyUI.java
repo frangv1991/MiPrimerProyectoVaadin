@@ -38,6 +38,7 @@ public class MyUI extends UI {
         
         grid.setSelectionMode(SelectionMode.SINGLE);
         grid.setColumns("nombre", "apellido", "email");
+        grid.setSizeFull();
         
         actualizarTabla();
         
@@ -53,10 +54,12 @@ public class MyUI extends UI {
         filtrado.addComponents(filterText, borrarFiltro);
         filtrado.setStyleName(ValoTheme.LAYOUT_COMPONENT_GROUP);
         
-        setContent(filtrado);
+        layout.addComponents(filtrado, grid);
+        
+        setContent(layout);
     }
     
-    private void actualizarTabla() {
+    public void actualizarTabla() {
     	grid.setItems(clienteService.findAll(filterText.getValue()));
     }
 
