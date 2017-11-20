@@ -50,7 +50,7 @@ public class ClienteService {
 
 	public List<Cliente> findAll(String cadena) {
 		return contactos.values().stream().filter(contacto -> {
-			return (cadena == null || !cadena.isEmpty()) || (contacto.getNombre().toLowerCase().contains(cadena.toLowerCase()) || contacto.getApellido().toLowerCase().contains(cadena.toLowerCase()));
+			return (cadena == null || cadena.isEmpty()) || (contacto.getNombre().toLowerCase().contains(cadena.toLowerCase()) || contacto.getApellido().toLowerCase().contains(cadena.toLowerCase()));
 		}).collect(Collectors.toList());
 	}
 
@@ -81,4 +81,10 @@ public class ClienteService {
 	public void borrar (Cliente cliente) {
 		contactos.remove(cliente.getId());
 	}
+
+	public Map<Long, Cliente> getContactos() {
+		return contactos;
+	}
+	
+	
 }

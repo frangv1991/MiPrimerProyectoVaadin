@@ -8,9 +8,10 @@ public class ClienteFormBack extends ClienteForm {
 	private ClienteService clienteService = ClienteService.getInstancia();
 	private Binder<Cliente> binder = new Binder<>(Cliente.class);
 	private Cliente cliente;
-	private MyUI myUi;
+	private ClienteView myUi;
 	
-	public ClienteFormBack(MyUI myUi) {
+	public ClienteFormBack(ClienteView myUi) {
+		
 		this.myUi = myUi;
 		
 		guardar.setClickShortcut(KeyCode.ENTER);

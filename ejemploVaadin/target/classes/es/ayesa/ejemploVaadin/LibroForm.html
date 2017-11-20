@@ -7,17 +7,10 @@
  </head>
  <body>
   <vaadin-form-layout size-full margin>
-   <vaadin-text-field caption="Nombre" _id="nombre"></vaadin-text-field>
-   <vaadin-text-field caption="Apellido" _id="apellido"></vaadin-text-field>
-   <vaadin-text-field caption="Correo" _id="correo"></vaadin-text-field>
-   <vaadin-date-field caption="Fecha de nacimiento" _id="fecha_nacimiento"></vaadin-date-field>
-   <vaadin-native-select caption="Estado" data-item-type="es.ayesa.ejemploVaadin.ClienteEstado" _id="estado"></vaadin-native-select>
+   <vaadin-native-select caption="Clientes" data-item-type="es.ayesa.ejemploVaadin.Cliente" _id="cliente"></vaadin-native-select>
    <vaadin-horizontal-layout spacing="false">
-    <vaadin-button style-name="primary" plain-text _id="guardar">
-      Guardar 
-    </vaadin-button>
-    <vaadin-button style-name="danger" plain-text _id="borrar">
-      Borrar 
+    <vaadin-button style-name="primary" plain-text _id="prestar">
+      Prestar 
     </vaadin-button>
    </vaadin-horizontal-layout>
   </vaadin-form-layout>
